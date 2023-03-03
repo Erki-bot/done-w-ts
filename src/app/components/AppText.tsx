@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: colors.black,
-    fontFamily: "Roboto",
     fontWeight: "bold",
+    fontFamily :'serif'
   },
 });

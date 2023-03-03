@@ -3,15 +3,13 @@ import React from "react";
 import { CardProps } from "../../interfaces/CardProps";
 import colors from "../colors/colors";
 import AppText from "./AppText";
+import DescriptionComponent from "./DescriptionComponent";
 
 const Card = (props: CardProps) => {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={props.image} />
-      <View style={styles.titleContainer}>
-        <AppText style={styles.title}>{props.title}</AppText>
-        <AppText style={styles.subTitle}>{props.subTitle}</AppText>
-      </View>
+      <DescriptionComponent title={props.title} subTitle = {props.subTitle}/>
     </View>
   );
 };
@@ -30,15 +28,5 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 10,
   },
-  title: {
-    marginBottom: 10,
-    fontWeight: "none",
-  },
-  subTitle: {
-    color: colors.blue,
-    marginBottom: 10,
-  },
-  titleContainer: {
-    paddingHorizontal: 20,
-  },
+
 });
