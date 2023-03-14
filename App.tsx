@@ -1,24 +1,20 @@
 import React from "react";
 import { View, Text } from "react-native";
+import ListIconItem from "./src/app/components/ListIconItem";
+import ListingDetailScreen from "./src/app/screens/ListingDetailScreen";
+import MessagesScreen from "./src/app/screens/MessagesScreen";
 import ViewImageScreen from "./src/app/screens/ViewImageScreen";
-
+import Screen from "./src/app/components/Screen";
+import TestScreen from "./src/app/screens/TestScreen";
+import MyAccountScreen from "./src/app/screens/MyAccountScreen";
+import ListingScreen from "./src/app/screens/ListingScreen";
 export default function App() {
   return (
-    <ViewImageScreen/>
-     
-    );
-  }
-  /*
+<MyAccountScreen/>);
+}
+/*
   {/* <Text style={{ fontFamily: "normal" }}> normal </Text>
-  <ListingDetailScreen
-    image={require("./src/app/assets/jacket.jpg")}
-    title="Red jacket for sale!"
-    subTitle="$100"
-    userAvatar={require("./src/app/assets/mosh.jpg")}
-    user={{
-      name: "Mosh Hamedani",
-      description: "5 Listings",
-    }}
+  
   />
       <Text style={{ fontFamily: "notoserif" }}> notoserif </Text>
       <Text style={{ fontFamily: "sans-serif" }}> sans-serif </Text>

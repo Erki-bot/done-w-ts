@@ -7,13 +7,13 @@ const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={[styles.icon, styles.close]}>
-        <MaterialCommunityIcons name="close" color={colors.white} size={40} />
+        <MaterialCommunityIcons name="close" color={colors.white} size={35} />
       </TouchableOpacity>
       <TouchableOpacity style={[styles.icon, styles.delete]}>
         <MaterialCommunityIcons
           name="trash-can-outline"
           color={colors.white}
-          size={40}
+          size={35}
         />
       </TouchableOpacity>
 
@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
   icon: {
     position: "absolute",
     top: 40,
-
   },
   close: {
     left: 30,

@@ -4,13 +4,17 @@ import { CardProps } from "../../interfaces/CardProps";
 import colors from "../colors/colors";
 import AppText from "./AppText";
 import DescriptionComponent from "./DescriptionComponent";
+import TouchableIcon from "./TouchableIcon";
 
 const Card = (props: CardProps) => {
   return (
-    <View style={styles.container}>
+    <TouchableIcon
+    onPress={props.onPress}>
+        <View style={styles.container}>
       <Image style={styles.image} source={props.image} />
       <DescriptionComponent title={props.title} subTitle = {props.subTitle}/>
     </View>
+    </TouchableIcon>
   );
 };
 
@@ -22,6 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     borderRadius: 16,
     overflow: "hidden",
+    marginVertical : 15
   },
   image: {
     width: "100%",
