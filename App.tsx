@@ -10,6 +10,10 @@ import MyAccountScreen from "./src/app/screens/MyAccountScreen";
 import ListingScreen from "./src/app/screens/ListingScreen";
 export default function App() {
   return (
+    <TestScreen/>
+  );
+}
+/*
 <ListingDetailScreen 
 title = "Titre"
 subTitle = "Description"
@@ -17,9 +21,7 @@ image = {require('./src/app/assets/jacket.jpg')}
 user = {
    { name :"KIKI",
     description :'Eric'}
-  }/>);
-}
-/*
+  }/>
   {/* <Text style={{ fontFamily: "normal" }}> normal </Text>
   
   />

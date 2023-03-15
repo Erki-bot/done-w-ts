@@ -7,9 +7,10 @@ const colors = {
   gray: "#ccc",
   lightGray: "#f4f4f4",
   lightGray2: "#eee",
-  danger : '#ff5252',
-  backGray : '#f4f4f4',
-  warning : '#ffed66'
+  danger: "#ff5252",
+  backGray: "#f4f4f4",
+  warning: "#ffed66",
+  darkGray: "#0c0c0c",
 };
 
 export default colors;

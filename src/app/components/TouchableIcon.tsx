@@ -1,6 +1,6 @@
 import { TouchableHighlight } from "react-native";
 import React from "react";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
 const TouchableIcon = (props: { onPress: () => void; children: any }) => {
   return (

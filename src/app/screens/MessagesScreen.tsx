@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 import ItemsSeparator from "../components/ItemsSeparator";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 const messages = [
   {

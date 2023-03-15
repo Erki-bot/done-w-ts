@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 import AppText from "./AppText";
 import TouchableIcon from "./TouchableIcon";
-import Icon from "./Icon";
+import Icon from "./RoundIcon";
 const ListIconItem = (props: {
   icon: string;
   description: string;

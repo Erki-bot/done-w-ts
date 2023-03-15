@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { CardProps } from "../../interfaces/CardProps";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 import AppText from "./AppText";
 import DescriptionComponent from "./DescriptionComponent";
 import TouchableIcon from "./TouchableIcon";

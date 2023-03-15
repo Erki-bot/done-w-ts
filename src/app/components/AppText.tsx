@@ -1,8 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
-const AppText = ({ children, style }) => {
+type PropsType = {
+  children: string;
+  style?: any;
+};
+
+const AppText = ({ children, style }: PropsType) => {
   return <Text style={[styles.text, style]}>{children}</Text>;
 };
 
@@ -12,7 +17,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: colors.black,
-    fontWeight: "bold",
-    fontFamily :'serif'
+    fontFamily: "serif",
   },
 });

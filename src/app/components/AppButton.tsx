@@ -6,7 +6,7 @@ import {
 } from "react-native";
 import React from "react";
 
-import colors from "../colors/colors";
+import colors from "../config/colors";
 import { ButtonProps } from "../../interfaces/ButtonProps";
 
 const AppButton = (props: ButtonProps) => {

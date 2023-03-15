@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
 const ViewImageScreen = () => {
   return (

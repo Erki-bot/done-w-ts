@@ -10,7 +10,7 @@ import React from "react";
 import Screen from "../components/Screen";
 import ListIconItem from "../components/ListIconItem";
 import ListItem from "../components/ListItem";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 import ItemsSeparator from "../components/ItemsSeparator";
 const items = [
   {

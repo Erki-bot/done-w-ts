@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
 const ItemsSeparator = () => {
   return <View style={styles.container} />;

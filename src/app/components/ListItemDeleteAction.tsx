@@ -1,7 +1,7 @@
 import { GestureResponderEvent, StyleSheet, Text, TouchableWithoutFeedback, View } from "react-native";
 import React from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
 const ListItemDeleteAction = (props:{onPress:(event: GestureResponderEvent) => void}) => {
   return (

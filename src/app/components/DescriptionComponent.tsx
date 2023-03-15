@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import AppText from "./AppText";
 import { DescriptionComponentProps } from "../../interfaces/DescriptionComponentProps";
-import colors from "../colors/colors";
+import colors from "../config/colors";
 
 const DescriptionComponent = (props: DescriptionComponentProps) => {
   return (
