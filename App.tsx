@@ -8,10 +8,9 @@ import Screen from "./src/app/components/Screen";
 import TestScreen from "./src/app/screens/TestScreen";
 import MyAccountScreen from "./src/app/screens/MyAccountScreen";
 import ListingScreen from "./src/app/screens/ListingScreen";
+import LoginScreen from "./src/app/screens/LoginScreen";
 export default function App() {
-  return (
-    <TestScreen/>
-  );
+  return <LoginScreen />;
 }
 /*
 <ListingDetailScreen 

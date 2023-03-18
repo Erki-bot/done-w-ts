@@ -3,7 +3,7 @@ import React from "react";
 import colors from "../config/colors";
 
 type PropsType = {
-  children: string;
+  children?: string;
   style?: any;
 };
 
