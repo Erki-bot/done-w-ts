@@ -5,10 +5,15 @@ import { ListItemProps } from "../../interfaces/ListItemProps";
 import colors from "../config/colors";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 import { Gesture, GestureHandlerRootView } from "react-native-gesture-handler";
+
+import defaultStyle from "../config/style";
+import Icon from "./Icon";
+
 const ListItem = (props: ListItemProps) => {
   const tap = Gesture.Tap().onStart(() => {
     console.log("tap");
-  });``
+  });
+  ``;
 
   return (
     <GestureHandlerRootView>
@@ -20,9 +25,19 @@ const ListItem = (props: ListItemProps) => {
           <View style={styles.container}>
             <Image source={props.image} style={styles.image} />
             <View style={styles.userContainer}>
-              <AppText style={styles.title}>{props.title}</AppText>
-              <AppText style={styles.subTitle}>{props.subTitle}</AppText>
+              <AppText
+                style={[defaultStyle.text, styles.title]}
+                numberOfLines={1}
+              >
+                {props.title}
+              </AppText>
+              {props.subTitle && (
+                <AppText style={styles.subTitle} numberOfLines={2}>
+                  {props.subTitle}
+                </AppText>
+              )}
             </View>
+            <Icon name="chevron-right" size={25} color={colors.medium} />
           </View>
         </TouchableHighlight>
       </Swipeable>
@@ -34,6 +49,7 @@ export default ListItem;
 const size = 70;
 const styles = StyleSheet.create({
   userContainer: {
+    flex: 1,
     paddingLeft: 10,
     justifyContent: "center",
   },
@@ -55,5 +71,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: 10,
     backgroundColor: colors.white,
+    alignItems: "center",
   },
 });

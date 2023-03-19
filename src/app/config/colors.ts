@@ -11,6 +11,7 @@ const colors = {
   backGray: "#f4f4f4",
   warning: "#ffed66",
   darkGray: "#0c0c0c",
+  medium : "#6e6969"
 };
 
 export default colors;

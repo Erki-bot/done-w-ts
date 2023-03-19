@@ -16,6 +16,7 @@ const AppTextInput = ({ icon, ...otherProps }: PropsType) => {
     <View style={styles.container}>
       {icon && <Icon name={icon} size={20} style={styles.icon} />}
       <TextInput
+        placeholderTextColor={colors.medium}
         style={defaultStyle.text}
         cursorColor={colors.darkGray}
         {...otherProps}

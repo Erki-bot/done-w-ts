@@ -7,8 +7,12 @@ type PropsType = {
   style?: any;
 };
 
-const AppText = ({ children, style }: PropsType) => {
-  return <Text style={[styles.text, style]}>{children}</Text>;
+const AppText = ({ children, style, ...otherProps }: PropsType) => {
+  return (
+    <Text style={[styles.text, style]} {...otherProps}>
+      {children}
+    </Text>
+  );
 };
 
 export default AppText;
@@ -17,6 +21,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     color: colors.black,
-    fontFamily: "serif",
+    fontFamily: "Roboto",
   },
 });

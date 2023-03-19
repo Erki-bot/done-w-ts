@@ -8,8 +8,10 @@ import ListItemDeleteAction from "../components/ListItemDeleteAction";
 const messages = [
   {
     id: 1,
-    title: "Message 1",
-    description: "Description 1",
+    title:
+      "Laoihfiufheojcocicnos cdbhucuidscn cchdsvcudh coQPJDZOJC QZOFHHSVV OIHJIZHFQ QOIDSFHCQSC lorem",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, doloribus nesciunt voluptatibus rem esse fugiat illo vero magnam? Obcaecati, facilis. Ut dicta enim eos fugit aspernatur recusandae, quae illum beatae.",
     image: require("../assets/mosh.jpg"),
   },
   {

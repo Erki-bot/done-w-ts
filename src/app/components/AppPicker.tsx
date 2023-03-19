@@ -16,6 +16,7 @@ import defaultStyle from "../config/style";
 import AppText from "./AppText";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
+import { useFormikContext } from "formik";
 let minHeight = 25;
 let maxHeight = 30;
 type Item = {
@@ -38,14 +39,22 @@ const AppPicker = ({
   ...otherProps
 }: PropsType) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { setFieldValue } = useFormikContext();
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(!modalVisible)}>
         <View style={styles.container}>
           {icon && <Icon name={icon} size={20} style={styles.icon} />}
-          <AppText style={[defaultStyle.text, styles.text]}>
-            {selected ? selected.label : placeholder}
-          </AppText>
+          {selected ? (
+            <AppText style={[defaultStyle.text, styles.text]}>
+              {selected.label}
+            </AppText>
+          ) : (
+            <AppText style={[defaultStyle.text, styles.placeholder]}>
+              {placeholder}
+            </AppText>
+          )}
+
           <Icon name={"chevron-down"} size={20} />
         </View>
       </TouchableWithoutFeedback>
@@ -79,6 +88,10 @@ export default AppPicker;
 const styles = StyleSheet.create({
   text: {
     flex: 1,
+  },
+  placeholder: {
+    flex: 1,
+    color: colors.medium,
   },
   container: {
     backgroundColor: colors.backGray,
