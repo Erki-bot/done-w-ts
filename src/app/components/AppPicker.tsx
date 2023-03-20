@@ -27,6 +27,8 @@ type PropsType = {
   icon?: string;
   placeholder: string;
   selected: Item;
+  PickerItemComponent?: any;
+  width?: string | number;
   items: Item[];
   setSelected: (item: Item) => void;
 };
@@ -36,6 +38,8 @@ const AppPicker = ({
   items,
   selected,
   setSelected,
+  PickerItemComponent = PickerItem,
+  width = "100%",
   ...otherProps
 }: PropsType) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -43,7 +47,7 @@ const AppPicker = ({
   return (
     <>
       <TouchableWithoutFeedback onPress={() => setModalVisible(!modalVisible)}>
-        <View style={styles.container}>
+        <View style={[styles.container, { width }]}>
           {icon && <Icon name={icon} size={20} style={styles.icon} />}
           {selected ? (
             <AppText style={[defaultStyle.text, styles.text]}>
@@ -68,8 +72,8 @@ const AppPicker = ({
             data={items}
             keyExtractor={(item) => item.value.toString()}
             renderItem={({ item }) => (
-              <PickerItem
-                label={item.label}
+              <PickerItemComponent
+                item={item}
                 onPress={() => {
                   setModalVisible(false);
                   setSelected(item);
@@ -96,7 +100,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.backGray,
     alignItems: "center",
-    width: "100%",
     flexDirection: "row",
     borderRadius: 25,
     marginVertical: 10,

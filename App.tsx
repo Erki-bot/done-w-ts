@@ -12,7 +12,7 @@ import LoginScreen from "./src/app/screens/LoginScreen";
 import RegisterScreen from "./src/app/screens/RegisterScreen";
 import ListingEditScreen from "./src/app/screens/ListingEditScreen";
 export default function App() {
-  return <MessagesScreen />;
+  return <ListingEditScreen />;
 }
 /*
 <ListingDetailScreen 

@@ -6,11 +6,11 @@ import {
 } from "react-native-gesture-handler";
 import AppText from "./AppText";
 
-const PickerItem = ({ label, onPress }) => {
+const PickerItem = ({ item, onPress }) => {
   return (
     <GestureHandlerRootView>
       <TouchableOpacity onPress={onPress}>
-        <AppText style={styles.text}>{label}</AppText>
+        <AppText style={styles.text}>{item.label}</AppText>
       </TouchableOpacity>
     </GestureHandlerRootView>
   );

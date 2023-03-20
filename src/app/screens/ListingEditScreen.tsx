@@ -9,6 +9,7 @@ import {
 } from "../components/form";
 import Screen from "../components/Screen";
 import AppPicker from "../components/AppPicker";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 const categories = [
   { label: "Fournitures", value: 1 },
   { label: "Habits", value: 2 },
@@ -42,11 +43,14 @@ const ListingEditScreen = () => {
           maxLength={8}
           placeholder="Price"
           keyboardType="phone-pad"
+          width={120}
         />
         <AppFormPicker
           name="category"
           placehoder="Category"
           items={categories}
+          width={"50%"}
+          PickerItemComponent={CategoryPickerItem}
         />
         <AppFormField
           name={"description"}

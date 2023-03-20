@@ -11,9 +11,9 @@ type PropsType = {
 import defaultStyle from "../config/style";
 import AnimatedIcon from "./AnimatedIcon";
 
-const AppTextInput = ({ icon, ...otherProps }: PropsType) => {
+const AppTextInput = ({ icon, width = "100%", ...otherProps }: PropsType) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { width }]}>
       {icon && <Icon name={icon} size={20} style={styles.icon} />}
       <TextInput
         placeholderTextColor={colors.medium}
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.backGray,
     alignItems: "center",
-    width: "100%",
     flexDirection: "row",
     borderRadius: 25,
     marginVertical: 10,
