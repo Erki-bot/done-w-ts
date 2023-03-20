@@ -3,22 +3,18 @@ import {
   FlatList,
   Modal,
   StyleSheet,
-  TextInput,
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import colors from "../config/colors";
 import Icon from "./Icon";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import defaultStyle from "../config/style";
 import AppText from "./AppText";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
 import { useFormikContext } from "formik";
-let minHeight = 25;
-let maxHeight = 30;
 type Item = {
   label: string;
   value: number;
@@ -30,17 +26,18 @@ type PropsType = {
   PickerItemComponent?: any;
   width?: string | number;
   items: Item[];
+  numberOfColumns : number
   setSelected: (item: Item) => void;
 };
 const AppPicker = ({
   icon,
   placeholder,
   items,
+  numberOfColumns = 1,
   selected,
   setSelected,
   PickerItemComponent = PickerItem,
   width = "100%",
-  ...otherProps
 }: PropsType) => {
   const [modalVisible, setModalVisible] = useState(false);
   const { setFieldValue } = useFormikContext();
@@ -71,6 +68,7 @@ const AppPicker = ({
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
               <PickerItemComponent
                 item={item}

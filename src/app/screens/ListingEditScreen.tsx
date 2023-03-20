@@ -11,11 +11,11 @@ import Screen from "../components/Screen";
 import AppPicker from "../components/AppPicker";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 const categories = [
-  { label: "Fournitures", value: 1 },
-  { label: "Habits", value: 2 },
-  { label: "Chaussures", value: 3 },
-  { label: "Meubles", value: 4 },
-  { label: "Electronique", value: 5 },
+  { label: "Fournitures", value: 1, backgroundColor: "red", icon: "shoe-sneaker" },
+  { label: "Habits", value: 2, backgroundColor: "green", icon: "apps" },
+  { label: "Chaussures", value: 3, backgroundColor: "yellow", icon: "shoe-cleat" },
+  { label: "Meubles", value: 4, backgroundColor: "purple", icon: "lock" },
+  { label: "Electronique", value: 5, backgroundColor: "blue", icon: "tshirt-v-outline" },
 ];
 
 const validationSchema = Yup.object().shape({
@@ -49,6 +49,7 @@ const ListingEditScreen = () => {
           name="category"
           placehoder="Category"
           items={categories}
+          numberOfColumns={3}
           width={"50%"}
           PickerItemComponent={CategoryPickerItem}
         />
