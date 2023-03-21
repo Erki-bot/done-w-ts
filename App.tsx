@@ -11,8 +11,9 @@ import ListingScreen from "./src/app/screens/ListingScreen";
 import LoginScreen from "./src/app/screens/LoginScreen";
 import RegisterScreen from "./src/app/screens/RegisterScreen";
 import ListingEditScreen from "./src/app/screens/ListingEditScreen";
+import TestUserPermission from "./src/learning/TestUserPermission";
 export default function App() {
-  return <ListingEditScreen />;
+  return <TestUserPermission />;
 }
 /*
 <ListingDetailScreen 
